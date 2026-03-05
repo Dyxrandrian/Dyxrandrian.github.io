@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dylan Randrianarivony | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/png" href="./assets/images/favicon.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./dist/app.css">
+    <script src="./dist/app.js" defer></script>
+</head>
+
+<body class="bg-white selection:bg-silver-main">
+
+    <div id="preloader"
+        class="fixed inset-0 z-[9999] bg-black flex items-center justify-center transition-all duration-[1200ms] ease-[cubic-bezier(0.77,0,0.175,1)]">
+
+        <div class="relative z-10 overflow-hidden">
+            <img src="./assets/images/logo.png" alt="Loading..."
+                id="loader-logo"
+                class="h-20 md:h-28 w-auto object-contain opacity-0 scale-95 blur-sm transition-all duration-[1500ms] ease-out">
+        </div>
+
+    </div>
+
+    <header id="main-header" class="fixed top-0 left-0 w-full z-[100] py-6 transition-all duration-700 ease-in-out">
+        <div class="container mx-auto flex justify-between items-center px-6 lg:px-12">
+
+            <div class="logo">
+                <a href="index.html" class="block w-fit">
+                    <img src="./assets/images/logo.png" alt="Logo"
+                        id="main-logo"
+                        class="h-16 md:h-20 w-auto object-contain transition-all duration-500 ease-in-out">
+                </a>
+            </div>
+
+            <nav class="hidden md:block">
+                <ul class="flex gap-10 font-sans text-[10px] uppercase tracking-[0.4em] text-gray-500">
+                    <li><a href="#projects" class="hover:text-black transition">Projets</a></li>
+                    <li><a href="#skills" class="hover:text-black transition">Expertise</a></li>
+                    <li><a href="#contact" class="hover:text-black transition">Contact</a></li>
+                </ul>
+            </nav>
+
+            <button id="mobile-menu-trigger" class="md:hidden p-2">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.5">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <div id="mobile-menu"
+        class="fixed inset-0 z-[110] bg-white translate-x-full transition-transform duration-500 ease-in-out md:hidden">
+        <div class="flex flex-col h-full p-10">
+            <div class="flex justify-end">
+                <button id="mobile-menu-close" class="p-2">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.5">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="flex flex-col items-center justify-center flex-grow">
+                <ul class="flex flex-col items-center gap-10 font-serif text-4xl">
+                    <li><a href="#hero">Accueil</a></li>
+                    <li><a href="#projects">Projets</a></li>
+                    <li><a href="#skills">Expertise</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <section id="hero" class="relative min-h-screen flex items-center bg-[var(--color-bg-luxury)] overflow-hidden">
+
+        <div class="container mx-auto px-6 py-12">
+            <div class="flex flex-col items-center text-center">
+
+                <div class="relative mb-6 md:mb-8" data-aos="zoom-in" data-aos-duration="1000">
+                    <div
+                        class="absolute -inset-3 border border-dashed border-[var(--color-silver-main)] rounded-full animate-[spin_25s_linear_infinite] opacity-40">
+                    </div>
+
+                    <div
+                        class="relative w-32 h-32 md:w-44 md:h-44 rounded-full overflow-hidden border-4 border-white shadow-xl">
+                        <img src="./assets/images/hero.png"
+                            alt="Dylan - Bespoke Developer"
+                            class="w-full h-full object-cover object-top transition-all duration-700">
+                    </div>
+
+                    <div
+                        class="absolute bottom-1 right-1 md:bottom-3 md:right-3 bg-white p-1.5 rounded-full shadow-lg border border-[var(--color-silver-light)]">
+                        <div class="w-2.5 h-2.5 bg-green-500 rounded-full"></div>
+                    </div>
+                </div>
+
+                <div class="max-w-4xl">
+                    <h1 data-aos="fade-up"
+                        class="font-serif text-4xl md:text-6xl lg:text-7xl text-[var(--color-text-luxury)] leading-[1.1] mb-6">
+                        Dylan Randrianarivony <span class="italic text-[var(--color-silver-main)]">Portfolio.</span>
+                    </h1>
+
+                    <span data-aos="fade-up" data-aos-delay="200"
+                        class="block font-sans text-[10px] md:text-xs uppercase tracking-[0.4em] text-[var(--color-silver-dark)] mb-4">
+                        Digital Artisan & WordPress Architect
+                    </span>
+
+                    <p data-aos="fade-up" data-aos-delay="400"
+                        class="font-sans text-base md:text-lg text-[var(--color-silver-dark)] font-light leading-relaxed mb-8 max-w-2xl mx-auto">
+                        Je crée des sites WordPress **haute performance** avec une approche minimaliste.
+                        Ici, on ne parle pas de templates, mais de code sur-mesure.
+                    </p>
+
+                    <div data-aos="fade-up" data-aos-delay="600"
+                        class="flex flex-col sm:flex-row items-center justify-center gap-6 md:gap-10">
+                        <a href="#projects"
+                            class="px-8 py-3.5 bg-[var(--color-text-luxury)] text-white rounded-full text-[10px] font-bold uppercase tracking-widest hover:shadow-xl transition-all active:scale-95">
+                            Explorer mes travaux
+                        </a>
+
+                        <div class="flex items-center gap-6">
+                            <a href="https://wa.me/+261382978689" target="_blank"
+                                class="text-[var(--color-silver-dark)] hover:text-black transition-colors"
+                                aria-label="Whatsapp">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                                </svg>
+                            </a>
+
+                            <span class="w-[1px] h-4 bg-[var(--color-silver-main)]"></span>
+
+                            <a href="https://www.linkedin.com/in/dylan-ran" target="_blank"
+                                class="text-[var(--color-silver-dark)] hover:text-black transition-colors"
+                                aria-label="LinkedIn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                                    <rect width="4" height="12" x="2" y="9" />
+                                    <circle cx="4" cy="4" r="2" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div
+            class="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[var(--color-silver-light)] to-transparent">
+        </div>
+    </section>
+
+    <section id="projects" class="py-32 bg-white">
+        <div class="container mx-auto px-6 lg:px-12">
+
+            <div class="mb-24" data-aos="fade-right">
+                <span
+                    class="font-sans text-[10px] uppercase tracking-[0.5em] text-[var(--color-silver-dark)] mb-4 block">Selected
+                    Works</span>
+                <h2 class="font-serif text-5xl md:text-7xl text-[var(--color-text-luxury)] leading-tight">
+                    L'Atelier des <br><span class="italic">Réalisations.</span>
+                </h2>
+            </div>
+
+            <div class="space-y-40">
+
+                <article class="group relative grid grid-cols-1 lg:grid-cols-12 gap-8 items-center" data-aos="fade-up">
+                    <a href="https://www.fandomba-madagascar.org/" target="_blank"
+                        class="lg:col-span-8 overflow-hidden rounded-xl border border-silver shadow-sm group-hover:shadow-2xl transition-all duration-700">
+                        <img src="./assets/images/fandomba.png"
+                            alt="Fandomba Madagascar"
+                            class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-1000">
+                    </a>
+
+                    <div class="lg:col-span-4 lg:-ml-20 z-10 bg-white/95 backdrop-blur-md p-8 border-silver shadow-xl">
+                        <div class="flex flex-wrap items-center gap-3 mb-6">
+                            <span
+                                class="text-[9px] px-2 py-0.5 rounded-full bg-green-100 text-green-700 font-bold uppercase tracking-widest">Déployé</span>
+                            <span
+                                class="text-[9px] px-2 py-0.5 border border-silver rounded-full font-sans uppercase tracking-widest text-[var(--color-silver-dark)]">Freelance
+                                @ EpikBrand</span>
+                        </div>
+
+                        <h3 class="font-serif text-3xl text-[var(--color-text-luxury)] mb-4">Fandomba Madagascar
+                        </h3>
+                        <p class="font-sans text-sm text-[var(--color-silver-dark)] mb-8 leading-relaxed font-light">
+                            Développement d'une plateforme de don avec payment Vanilla pay International alliant
+                            design
+                            épuré et gestion de contenu WordPress sur-mesure.
+                        </p>
+                        <a href="https://www.fandomba-madagascar.org/" target="_blank"
+                            class="text-[10px] font-bold uppercase tracking-widest text-[var(--color-text-luxury)] border-b-2 border-[var(--color-text-luxury)] pb-1 hover:text-[var(--color-silver-dark)] hover:border-[var(--color-silver-dark)] transition-all">
+                            Visiter le site →
+                        </a>
+                    </div>
+                </article>
+
+                <article class="group relative grid grid-cols-1 lg:grid-cols-12 gap-8 items-center" data-aos="fade-up">
+                    <div
+                        class="lg:col-span-4 lg:col-start-2 order-2 lg:order-1 z-10 bg-white/95 backdrop-blur-md p-8 border-silver shadow-xl lg:-mr-20">
+                        <div class="flex flex-wrap items-center gap-3 mb-6">
+                            <span
+                                class="text-[9px] px-2 py-0.5 rounded-full bg-orange-50 text-orange-600 font-bold uppercase tracking-widest">En
+                                cours</span>
+                            <span
+                                class="text-[9px] px-2 py-0.5 border border-silver rounded-full font-sans uppercase tracking-widest text-[var(--color-silver-dark)]">Freelance
+                                @ EpikBrand</span>
+                        </div>
+
+                        <h3 class="font-serif text-3xl text-[var(--color-text-luxury)] mb-4">BII Mada</h3>
+                        <p class="font-sans text-sm text-[var(--color-silver-dark)] mb-8 leading-relaxed font-light">
+                            Interface business moderne conçue pour la clarté, optimisée pour l'écosystème global
+                            de la
+                            marque.
+                        </p>
+                        <a href="https://bii.epik-brand.com/" target="_blank"
+                            class="text-[10px] font-bold uppercase tracking-widest text-[var(--color-text-luxury)] border-b-2 border-[var(--color-text-luxury)] pb-1 transition-all">
+                            Aperçu live →
+                        </a>
+                    </div>
+
+                    <a href="https://bii.epik-brand.com/" target="_blank"
+                        class="lg:col-span-7 lg:col-start-6 order-1 lg:order-2 overflow-hidden rounded-xl border border-silver shadow-sm group-hover:shadow-2xl transition-all duration-700">
+                        <img src="./assets/images/bii.png"
+                            alt="BII Epik Brand"
+                            class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-1000">
+                    </a>
+                </article>
+
+                <article class="group relative grid grid-cols-1 lg:grid-cols-12 gap-8 items-center" data-aos="fade-up">
+                    <a href="https://da.coaching.epik-brand.com/" target="_blank"
+                        class="lg:col-span-8 overflow-hidden rounded-xl border border-silver shadow-sm group-hover:shadow-2xl transition-all duration-700">
+                        <img src="./assets/images/coaching.png"
+                            alt="DA Coaching"
+                            class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-1000">
+                    </a>
+
+                    <div class="lg:col-span-4 lg:-ml-20 z-10 bg-white/95 backdrop-blur-md p-8 border-silver shadow-xl">
+                        <div class="flex flex-wrap items-center gap-3 mb-6">
+                            <span
+                                class="text-[9px] px-2 py-0.5 rounded-full bg-orange-50 text-orange-600 font-bold uppercase tracking-widest">En
+                                cours</span>
+                            <span
+                                class="text-[9px] px-2 py-0.5 border border-silver rounded-full font-sans uppercase tracking-widest text-[var(--color-silver-dark)]">Freelance
+                                @ EpikBrand</span>
+                        </div>
+
+                        <h3 class="font-serif text-3xl text-[var(--color-text-luxury)] mb-4">DA Coaching</h3>
+                        <p class="font-sans text-sm text-[var(--color-silver-dark)] mb-8 leading-relaxed font-light">
+                            Design axé sur le développement personnel, alliant esthétique premium et fluidité de
+                            navigation.
+                        </p>
+                        <a href="https://da.coaching.epik-brand.com/" target="_blank"
+                            class="text-[10px] font-bold uppercase tracking-widest text-[var(--color-text-luxury)] border-b-2 border-[var(--color-text-luxury)] pb-1 transition-all">
+                            Aperçu live →
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-32 bg-[#0a0a0a] border-t border-white/5">
+        <div class="container mx-auto px-6 lg:px-12">
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+
+                <div class="lg:col-span-4" data-aos="fade-right">
+                    <span
+                        class="font-sans text-[10px] uppercase tracking-[0.5em] text-[var(--color-silver-dark)] mb-6 block">Expertise</span>
+                    <h2 class="font-serif text-5xl text-white leading-tight mb-8">
+                        La Maîtrise <br><span class="italic text-[var(--color-silver-main)]">du Détail.</span>
+                    </h2>
+                    <p class="font-sans text-sm text-[var(--color-silver-dark)] leading-relaxed font-light max-w-sm">
+                        Je ne me contente pas de "faire des sites". Je construis des outils performants,
+                        scalables et
+                        pensés pour l'utilisateur final avec les meilleures technologies du marché.
+                    </p>
+                </div>
+
+                <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-12">
+
+                    <div class="p-8 border border-white/10 rounded-sm hover:border-[var(--color-silver-main)] transition-all duration-500 group"
+                        data-aos="fade-up" data-aos-delay="200">
+                        <div
+                            class="w-10 h-[1px] bg-[var(--color-silver-main)] mb-6 group-hover:w-20 transition-all duration-500">
+                        </div>
+                        <h3 class="font-serif text-2xl text-white mb-6 italic">Architecture WP</h3>
+                        <ul
+                            class="space-y-4 font-sans text-xs uppercase tracking-widest text-[var(--color-silver-dark)]">
+                            <li class="flex items-center gap-3"><span
+                                    class="w-1 h-1 bg-[var(--color-silver-main)] rounded-full"></span>
+                                Développement de
+                                Thèmes Custom</li>
+                            <li class="flex items-center gap-3"><span
+                                    class="w-1 h-1 bg-[var(--color-silver-main)] rounded-full"></span> Custom
+                                Post Types
+                                & ACF</li>
+                            <li class="flex items-center gap-3"><span
+                                    class="w-1 h-1 bg-[var(--color-silver-main)] rounded-full"></span>
+                                Optimisation Core
+                                Web Vitals</li>
+                        </ul>
+                    </div>
+
+                    <div class="p-8 border border-white/10 rounded-sm hover:border-[var(--color-silver-main)] transition-all duration-500 group"
+                        data-aos="fade-up" data-aos-delay="400">
+                        <div
+                            class="w-10 h-[1px] bg-[var(--color-silver-main)] mb-6 group-hover:w-20 transition-all duration-500">
+                        </div>
+                        <h3 class="font-serif text-2xl text-white mb-6 italic">Modern Stack</h3>
+                        <ul
+                            class="space-y-4 font-sans text-xs uppercase tracking-widest text-[var(--color-silver-dark)]">
+                            <li class="flex items-center gap-3"><span
+                                    class="w-1 h-1 bg-[var(--color-silver-main)] rounded-full"></span> Vite.js &
+                                Workflow Moderne</li>
+                            <li class="flex items-center gap-3"><span
+                                    class="w-1 h-1 bg-[var(--color-silver-main)] rounded-full"></span> Tailwind
+                                CSS
+                                Architecture</li>
+                            <li class="flex items-center gap-3"><span
+                                    class="w-1 h-1 bg-[var(--color-silver-main)] rounded-full"></span>
+                                Animations
+                                fluides (AOS)</li>
+                        </ul>
+                    </div>
+
+                    <div class="p-8 border border-white/10 rounded-sm hover:border-[var(--color-silver-main)] transition-all duration-500 group"
+                        data-aos="fade-up" data-aos-delay="600">
+                        <div
+                            class="w-10 h-[1px] bg-[var(--color-silver-main)] mb-6 group-hover:w-20 transition-all duration-500">
+                        </div>
+                        <h3 class="font-serif text-2xl text-white mb-6 italic">Outils & Workflow</h3>
+                        <ul
+                            class="space-y-4 font-sans text-xs uppercase tracking-widest text-[var(--color-silver-dark)]">
+                            <li class="flex items-center gap-3"><span
+                                    class="w-1 h-1 bg-[var(--color-silver-main)] rounded-full"></span> Git &
+                                GitHub</li>
+                            <li class="flex items-center gap-3"><span
+                                    class="w-1 h-1 bg-[var(--color-silver-main)] rounded-full"></span> Prompt
+                                Engineering</li>
+                            <li class="flex items-center gap-3"><span
+                                    class="w-1 h-1 bg-[var(--color-silver-main)] rounded-full"></span> LocalWP &
+                                Deployment</li>
+                        </ul>
+                    </div>
+
+                    <div class="p-8 bg-white/5 rounded-sm border border-white/10 hover:bg-white/10 transition-colors duration-500"
+                        data-aos="fade-up" data-aos-delay="800">
+                        <h3 class="font-serif text-2xl text-[var(--color-silver-main)] mb-6 italic">L'Approche
+                            Freelance
+                        </h3>
+                        <p
+                            class="font-sans text-[11px] uppercase tracking-widest text-[var(--color-silver-dark)] leading-relaxed">
+                            Collaboration agile avec des agences (EpikBrand), respect des deadlines et
+                            communication
+                            transparente sont les piliers de mon travail.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="relative py-40 bg-white overflow-hidden">
+
+        <div
+            class="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/pinstriped-suit.png')]">
+        </div>
+
+        <div class="container mx-auto px-6 lg:px-12 relative z-10 text-center">
+
+            <div data-aos="fade-up" class="mb-12">
+                <span
+                    class="font-sans text-[10px] uppercase tracking-[0.6em] text-[var(--color-silver-dark)] border border-[var(--color-silver-light)] px-6 py-2 rounded-full">
+                    Get in Touch
+                </span>
+            </div>
+
+            <h2 data-aos="fade-up" data-aos-delay="200"
+                class="font-serif text-6xl md:text-8xl lg:text-[120px] text-[var(--color-text-luxury)] leading-none mb-16 tracking-tighter">
+                Donnons vie à <br>
+                <span class="italic font-light">l'Inspiré.</span>
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-16 items-center max-w-6xl mx-auto">
+
+                <div data-aos="fade-up" data-aos-delay="400" class="flex flex-col items-center group">
+                    <p
+                        class="font-sans text-[10px] uppercase tracking-widest text-[var(--color-silver-dark)] mb-6 italic">
+                        Projets & Collaborations</p>
+                    <a href="mailto:tolotra.dylan@gmail.com"
+                        class="relative inline-flex items-center gap-4 px-8 py-4 bg-[var(--color-text-luxury)] text-white rounded-full overflow-hidden transition-all hover:pr-12 group">
+                        <span class="font-sans text-[10px] font-bold uppercase tracking-widest">Envoyer un
+                            Mail</span>
+                        <span class="absolute right-4 opacity-0 group-hover:opacity-100 transition-all">→</span>
+                    </a>
+                    <span
+                        class="mt-4 font-serif text-sm italic text-[var(--color-silver-dark)]">tolotra.dylan@gmail.com</span>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="600"
+                    class="flex flex-col items-center order-first md:order-none">
+                    <div class="w-16 h-16 rounded-full border border-silver flex items-center justify-center mb-6">
+                        <span class="relative flex h-3 w-3">
+                            <span
+                                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                        </span>
+                    </div>
+                    <p
+                        class="font-sans text-[10px] uppercase tracking-[0.3em] text-[var(--color-silver-dark)] leading-relaxed font-bold">
+                        Disponible <br> <span class="font-light italic lowercase text-xs">en freelance</span>
+                    </p>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="800" class="flex flex-col items-center">
+                    <p
+                        class="font-sans text-[10px] uppercase tracking-widest text-[var(--color-silver-dark)] mb-6 italic">
+                        Réseaux & Direct</p>
+                    <div class="flex justify-center gap-8">
+                        <a href="https://wa.me/261382978689" target="_blank"
+                            class="text-[var(--color-text-luxury)] hover:text-green-500 transition-all duration-500 scale-125">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l2.27-2.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="https://github.com/Dyxrandrian" target="_blank"
+                            class="text-[var(--color-text-luxury)] hover:text-[var(--color-silver-main)] transition-all duration-500 scale-125">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/dylan-ran/" target="_blank"
+                            class="text-[var(--color-text-luxury)] hover:text-blue-600 transition-all duration-500 scale-125">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                </path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#0a0a0a] pt-16 md:pt-24 pb-10 overflow-hidden relative">
+
+        <div
+            class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[var(--color-silver-dark)] to-transparent opacity-20">
+        </div>
+
+        <div class="container mx-auto px-6 lg:px-12 relative z-10">
+
+            <div
+                class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center border-b border-white/5 pb-12 md:pb-16">
+
+                <div class="text-center md:text-left space-y-4">
+                    <a href="#hero" class="font-serif text-2xl md:text-3xl text-white tracking-tighter block">
+                        Dylan RANDRIANARIVONY<span class="italic text-[var(--color-silver-main)]">.</span>
+                    </a>
+                    <p
+                        class="font-sans text-[9px] md:text-[10px] uppercase tracking-[0.4em] md:tracking-[0.5em] text-[var(--color-silver-dark)] max-w-[250px] mx-auto md:mx-0 leading-loose">
+                        Artisan Digital & <br class="md:hidden"> Développeur Freelance
+                    </p>
+                </div>
+
+                <div class="text-center md:text-right">
+                    <p
+                        class="font-serif italic text-lg md:text-xl text-white/40 leading-relaxed max-w-xs md:max-w-sm mx-auto md:ml-auto">
+                        "Le code est une forme d'art au service de l'expérience."
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="mt-10 md:mt-12 flex flex-col md:flex-row justify-between items-center gap-8 md:gap-6">
+
+                <p
+                    class="font-sans text-[8px] md:text-[9px] uppercase tracking-[0.3em] md:tracking-[0.4em] text-[var(--color-silver-dark)] text-center md:text-left order-2 md:order-1">
+                    &copy;
+                    2026 — Dylan RANDRIANARIVONY.
+                </p>
+
+                <div class="flex flex-wrap justify-center items-center gap-4 md:gap-6 opacity-40 order-1 md:order-2">
+                    <span
+                        class="font-sans text-[7px] md:text-[8px] uppercase tracking-widest text-white italic w-full text-center md:w-auto mb-2 md:mb-0">Built
+                        with</span>
+                    <div class="flex gap-3">
+                        <span
+                            class="font-sans text-[8px] md:text-[9px] uppercase tracking-widest text-white border border-white/20 px-3 py-1 rounded-full whitespace-nowrap">Vite
+                            + Tailwind</span>
+                        <span
+                            class="font-sans text-[8px] md:text-[9px] uppercase tracking-widest text-white border border-white/20 px-3 py-1 rounded-full whitespace-nowrap">WordPress</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
+    
+    <style>
+        body.is-loading {
+            overflow: hidden;
+        }
+
+        /* Animation de pulsation très lente pour le logo pendant l'attente */
+        .pulse-slow {
+            animation: pulse-luxury 3s infinite ease-in-out;
+        }
+
+        @keyframes pulse-luxury {
+
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1);
+                filter: blur(0px);
+            }
+
+            50% {
+                opacity: 0.7;
+                transform: scale(1.05);
+                filter: blur(1px);
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            AOS.init();
+        });
+        document.addEventListener('DOMContentLoaded', () => {
+            const preloader = document.getElementById('preloader');
+            const logo = document.getElementById('loader-logo');
+
+            // 1. Entrée du logo : il sort du flou et grandit doucement
+            setTimeout(() => {
+                logo.style.opacity = '1';
+                logo.style.transform = 'scale(1)';
+                logo.style.filter = 'blur(0px)';
+                logo.classList.add('pulse-slow');
+            }, 200);
+
+            // 2. Sortie cinématique
+            window.addEventListener('load', () => {
+                setTimeout(() => {
+                    // Effet de rideau qui monte (très Rockstar)
+                    preloader.style.transform = 'translateY(-100%)';
+
+                    // On libère le scroll un peu avant la fin de l'anim
+                    setTimeout(() => {
+                        document.body.classList.remove('is-loading');
+                    }, 600);
+
+                    // Nettoyage du DOM
+                    setTimeout(() => {
+                        preloader.style.display = 'none';
+                    }, 1300);
+                }, 2000); // On laisse le temps d'apprécier le logo
+            });
+        });
+    </script>
+
+</body>
+
+</html>
